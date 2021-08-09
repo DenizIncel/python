@@ -39,18 +39,22 @@ def response(voice):
         url = 'https://www.google.com/search?q=' + search
         webbrowser.get().open(url)
         speak(search + ' için bulduklarım')
-    if 'müzik aç' in voice:
+    if 'müzik ara' in voice:
         search = record('ne dinlemek istiyorsun')
         url = 'https://open.spotify.com/search/' + search
         webbrowser.get().open(url)
         speak(search + 'keyfini çıkar')
-    if 'Oyun ara' in voice:
+    if 'steamde ara' in voice:
         search = record('hangi oyuna bakmak istiyorsun')
         url = 'https://store.steampowered.com/search/' + search
         webbrowser.get().open(url)
-    if 'video ara' in voice:
+    if 'youtubede ara' in voice:
         search = record('ne aramak istiyorsun')
         url = 'https://www.youtube.com/results?search_query=' + search
+        webbrowser.get().open(url)
+    if 'netflixte ara' in voice:
+        search = record('ne aramak istiyorsun')
+        url = 'https://www.netflix.com/search?q=' + search
         webbrowser.get().open(url)
     if 'kapat' in voice:
         speak('görüşürüz')
