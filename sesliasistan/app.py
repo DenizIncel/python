@@ -58,14 +58,6 @@ def response(voice):
         speak('iyi seyirler')
         webbrowser.get().open(url)
         speak('iyi seyirler')
-    if 'instagramda ara' in voice:
-        search = record('ne aramak istiyorsun')
-        url = 'https://www.instagram.com/' + search
-        webbrowser.get().open(url)
-    if 'facebookta ara' in voice:
-        search = record('ne aramak istiyorsun')
-        url = 'https://www.facebookcom/' + search
-        webbrowser.get().open(url)
     if 'kapat' in voice:
         speak('görüşürüz')
         exit()
